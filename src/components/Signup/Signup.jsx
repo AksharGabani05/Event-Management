@@ -37,6 +37,7 @@ const Signup = () => {
   return (
     <div className="signup-container">
       <div className="signup-form">
+      <a href="/login">Login</a>
         <h2>Signup</h2>
         <form onSubmit={handleSignup}>
           <input
@@ -55,9 +56,7 @@ const Signup = () => {
           />
           <button type="submit">Signup</button>
         </form>
-        <p>
-          Already have an account? <a href="/login">Login</a>
-        </p>
+        
       </div>
       <ToastContainer /> {/* Toast notifications container */}
     </div>
