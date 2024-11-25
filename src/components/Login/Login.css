@@ -1,0 +1,70 @@
+/* components/Login/Login.css */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .login-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00bfa5;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-form button:hover {
+    background-color: #008e7d;
+  }
+  
+  .login-form p {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .login-form a {
+    color: #00bfa5;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 600px) {
+    .login-form {
+      padding: 20px;
+    }
+  
+    .login-form h2 {
+      font-size: 20px;
+    }
+  }
+  

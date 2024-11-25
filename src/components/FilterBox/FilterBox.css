@@ -1,0 +1,94 @@
+.filter-card {
+  width: 100%; /* Full width by default */
+  max-width: 500px; /* Restrict max width for larger screens */
+  height: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Adjusted for centered content */
+  align-items: center;
+  border-radius: 12px;
+  padding: 16px; /* Reduced padding for smaller screens */
+  margin: 20px auto; /* Centered margin */
+  border: 1px solid var(--primary-color);
+}
+
+.wrapper {
+  width: 100%; /* Full width */
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap for smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px; /* Add spacing between wrapped items */
+}
+
+.date {
+  flex: 1; /* Adjusts width for better wrapping */
+  min-width: 150px; /* Prevent items from shrinking too small */
+  text-align: center;
+}
+
+.date label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.date select {
+  font-size: 16px;
+  padding: 4px 8px;
+  width: 100%; /* Full width for select box */
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+}
+
+.filter-card button {
+  padding: 12px 28px;
+  border-style: none;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.filter-card button:hover {
+  background-color: rgb(9, 140, 16);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .filter-card {
+    padding: 12px; /* Reduce padding */
+    margin: 16px auto;
+  }
+
+  .wrapper {
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch;
+    gap: 12px; /* Reduced gap for tighter spaces */
+  }
+
+  .date {
+    min-width: unset; /* Allow shrinking if needed */
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-card {
+    padding: 8px; /* Further reduce padding */
+  }
+
+  .date label {
+    font-size: 14px;
+  }
+
+  .date select {
+    font-size: 14px;
+    padding: 2px 6px; /* Adjust padding for smaller inputs */
+  }
+
+  .filter-card button {
+    font-size: 14px; /* Smaller button text */
+    padding: 8px 16px;
+  }
+}

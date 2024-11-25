@@ -1,0 +1,113 @@
+:root {
+  --primary-color: #3498db; /* Example primary color */
+  --font-size-medium: 18px;
+  --font-size-large: 24px;
+  --font-size-small: 16px;
+  --padding-large: 40px;
+  --padding-medium: 20px;
+}
+
+.event-details-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content */
+}
+
+.event-details-wrapper {
+  padding: var(--padding-large) 80px 80px 80px;
+  max-width: 1200px; /* Optional max-width for better layout */
+  width: 100%; /* Full width */
+}
+
+.event-details-wrapper img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  margin-top: 60px;
+}
+
+.event-details-content {
+  margin-top: var(--padding-medium);
+}
+
+.event-details-content h3 {
+  font-size: var(--font-size-large);
+  text-transform: uppercase;
+  color: rgb(61, 61, 61);
+  font-weight: 600;
+  margin-bottom: var(--padding-medium);
+}
+
+.font-weight-med {
+  font-size: var(--font-size-medium);
+}
+
+.small-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-details .date,
+.small-details .location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+}
+
+.event-details-content .description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: var(--font-size-small);
+  margin-top: 20px;
+}
+
+.description-heading {
+  font-size: 20px; /* Removed !important */
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.description-heading-para {
+  font-size: var(--font-size-small); /* Removed !important */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .event-details-wrapper {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .event-details-wrapper img {
+    height: 30vh; /* Smaller height for images */
+  }
+
+  .event-details-content h3 {
+    font-size: 20px; /* Slightly smaller font size */
+  }
+}
+.back-button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #2980b9;
+}

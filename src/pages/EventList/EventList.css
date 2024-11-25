@@ -1,0 +1,186 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.event-list-wrapper {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Add Event Button */
+button.add-event-btn {
+  background-color: #28a745;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+button.add-event-btn:hover {
+  background-color: #218838;
+}
+
+/* Modal Styles */
+.Modal__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.modal-content h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="month"] {
+  width: 50%;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+button[type="submit"], button[type="button"] {
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover, button[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Form Input Fields */
+form div input:focus, form div textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .event-list {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  input[type="month"] {
+    width: 100%;
+  }
+}
+.add-event-button {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  background-color: #00bfa5;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Slightly rounded corners for a modern look */
+  padding: 15px 30px; /* More padding to make the button larger */
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease-in-out; /* Smooth transition for scaling and color change */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Ensures text is centered */
+}
+
+/* Hover effect */
+.add-event-button:hover {
+  background-color: #008e7d;
+  transform: scale(1.05); /* Slightly enlarges the button on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deepens the shadow effect */
+}
+
+/* Focus effect to improve accessibility */
+.add-event-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 183, 165, 0.5); /* Light glow effect when focused */
+}
+
+/* Add icon inside the button */
+.add-event-button .icon {
+  font-size: 24px; /* Icon size */
+  margin-right: 10px; /* Adds space between the icon and text */
+  transition: transform 0.3s ease; /* Smooth transition for icon scaling */
+}
+
+/* Scale the icon on hover for a smooth interaction */
+.add-event-button:hover .icon {
+  transform: scale(1.2); /* Slightly enlarges the icon */
+}
+.icon {
+  margin-right: 8px; 
+  /* Adds space between the icon and text */
+}
+
