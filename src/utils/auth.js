@@ -1,18 +1,16 @@
-// utils/auth.js
-
 export const setAuthToken = (token) => {
-    localStorage.setItem("authToken", token); // Store the token in localStorage
+    localStorage.setItem("authToken", token); 
   };
   
   export const getAuthToken = () => {
-    return localStorage.getItem("authToken"); // Retrieve the token from localStorage
+    return localStorage.getItem("authToken"); 
   };
   
   export const removeAuthToken = () => {
-    localStorage.removeItem("authToken"); // Remove the token from localStorage
+    localStorage.removeItem("authToken"); 
   };
   
   export const isAuthenticated = () => {
-    return !!getAuthToken(); // Returns true if a token exists, false otherwise
+    return !!getAuthToken();
   };
   

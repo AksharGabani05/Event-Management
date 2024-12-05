@@ -7,7 +7,7 @@ import "./EventDetails.css";
 const EventDetails = () => {
   const { id } = useParams();
   const numId = Number(id);
-  const navigate = useNavigate(); // Use navigate hook
+  const navigate = useNavigate(); 
 
   const filteredEvent = eventList.find(
     (eventDetail) => eventDetail.id === numId
@@ -17,9 +17,9 @@ const EventDetails = () => {
     return <div>Event not found</div>; 
   }
 
-  // Handle back navigation
+ 
   const handleBack = () => {
-    navigate(-1); // Go back one step in history
+    navigate(-1); 
   };
 
   return (
@@ -48,7 +48,7 @@ const EventDetails = () => {
         </div>
       </div>
 
-      {/* Back Button */}
+      
       <button className="back-button" onClick={handleBack}>
         &#8592; Back
       </button>

@@ -7,7 +7,7 @@ const Footer = () => {
       <p>
         Created by <strong>Akshar Gabani</strong> |{" "}
         <a
-          href="https://github.com/AksharGabani05" // Replace with your actual GitHub username
+          href="https://github.com/AksharGabani05" 
           target="_blank"
           rel="noopener noreferrer"
         >

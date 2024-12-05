@@ -1,9 +1,9 @@
-// components/Login/Login.jsx
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify"; // Import react-toastify
-import "react-toastify/dist/ReactToastify.css"; // Import the Toastify styles
-import "./Login.css"; // Import the CSS file for styling
+import { toast, ToastContainer } from "react-toastify"; 
+import "react-toastify/dist/ReactToastify.css"; 
+import "./Login.css"; 
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -13,27 +13,27 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Retrieve user data from localStorage
+   
     const storedUser = JSON.parse(localStorage.getItem("user"));
 
-    // For demonstration purposes, assume successful login with hardcoded email and password
+   
     if (storedUser && email === storedUser.email && password === storedUser.password) {
-      // Store the fake JWT token in localStorage
+      
       localStorage.setItem("authToken", "fake-jwt-token");
 
-      // Show success toast with custom duration of 1000 milliseconds
+      
       toast.success("Login successful!", {
-        autoClose: 1000, // Custom duration for the toast
+        autoClose: 1000, 
       });
 
-      // Redirect to home page after 2 seconds
+
       setTimeout(() => {
-        navigate("/event-list"); // Redirect after 2 seconds
+        navigate("/event-list"); 
       }, 2000);
     } else {
       toast.error("Invalid login credentials", {
-        autoClose: 1000, // Custom duration for the toast
-      }); // Show error toast
+        autoClose: 1000, 
+      }); 
     }
   };
 
@@ -62,7 +62,7 @@ const Login = () => {
           Don't have an account? <a href="/">Signup</a>
         </p>
       </div>
-      <ToastContainer /> {/* Toast notifications container */}
+      <ToastContainer /> 
     </div>
   );
 };

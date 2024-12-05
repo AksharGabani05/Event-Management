@@ -1,21 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom"; 
-import { toast } from "react-toastify"; // Import toast from react-toastify
-import "react-toastify/dist/ReactToastify.css"; // Import toastify styles
-import { FaEdit, FaTrashAlt } from "react-icons/fa"; // Import icons for Edit and Delete
-import { AiOutlineRead } from "react-icons/ai"; // Import icon for Read More
+import { toast } from "react-toastify"; 
+import "react-toastify/dist/ReactToastify.css"; 
+import { FaEdit, FaTrashAlt } from "react-icons/fa"; 
+import { AiOutlineRead } from "react-icons/ai";
 import "./EventCard.css";
 
 const EventCard = ({ id, date, heading, location, img, onEdit, onDelete }) => {
-  // Check if `date` is an object with `year` and `month`
-  const formattedDate = date && date.year && date.month 
-    ? `${date.month}/${date.year}`  // Customize this format as needed
-    : date; // Fallback to original date if it's already a string
 
-  // Handle delete event
+  const formattedDate = date && date.year && date.month 
+    ? `${date.month}/${date.year}`  
+    : date; 
+
+ 
   const handleDelete = (id) => {
-    onDelete(id); // Call the onDelete function passed down as a prop
-     // Show success toast
+    onDelete(id);
+    
   };
 
   return (

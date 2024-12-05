@@ -5,8 +5,8 @@ import "./Navigation.css";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false); 
   const [searchQuery, setSearchQuery] = useState(""); 
-  const [isLoggedIn, setIsLoggedIn] = useState(true); // Assume the user is logged in for now
-  const navigate = useNavigate(); // To programmatically navigate
+  const [isLoggedIn, setIsLoggedIn] = useState(true); 
+  const navigate = useNavigate(); 
 
   const toggleMenu = () => {
     setIsOpen(!isOpen); 
@@ -18,10 +18,10 @@ const Navigation = () => {
   };
 
   const handleLogout = () => {
-    // Clear any authentication data (e.g., JWT token) or session
-    localStorage.removeItem("userToken"); // Example: remove token from local storage
-    setIsLoggedIn(false); // Set the login state to false
-    navigate("/"); // Redirect to login page (or any other page)
+    
+    localStorage.removeItem("userToken"); 
+    setIsLoggedIn(false); 
+    navigate("/");
     console.log("User logged out");
   };
 
@@ -39,7 +39,6 @@ const Navigation = () => {
           <li>
             <Link to="/find-events" onClick={() => setIsOpen(false)}>Find Events</Link> 
           </li>
-          {/* Conditionally render Logout button */}
           {isLoggedIn && (
             <li>
               <button onClick={handleLogout} className="logout-btn">Logout</button>

@@ -1,9 +1,9 @@
-// components/Signup/Signup.jsx
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify"; // Import react-toastify
-import "react-toastify/dist/ReactToastify.css"; // Import the Toastify styles
-import "./Signup.css"; // Import the CSS file
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./Signup.css"; 
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -13,22 +13,22 @@ const Signup = () => {
   const handleSignup = (e) => {
     e.preventDefault();
 
-    // Store the user's email and password in localStorage (you can hash the password in real-world scenarios)
+    
     const userData = {
       email,
       password,
     };
 
-    // Save user data to localStorage
+    
     localStorage.setItem("user", JSON.stringify(userData));
-    localStorage.setItem("authToken", "fake-jwt-token"); // Store a fake token for demonstration purposes
+    localStorage.setItem("authToken", "fake-jwt-token"); 
 
-    // Show success toast with custom duration of 1000 milliseconds
+    
     toast.success("Signup successful! ", {
-      autoClose: 1000, // Custom duration for the toast
+      autoClose: 1000, 
     });
 
-    // Redirect to login page after 2 seconds
+    
     setTimeout(() => {
       navigate("/login");
     }, 2000);
@@ -58,7 +58,7 @@ const Signup = () => {
         </form>
         
       </div>
-      <ToastContainer /> {/* Toast notifications container */}
+      <ToastContainer />
     </div>
   );
 };
